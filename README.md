@@ -1,0 +1,1 @@
+# fiap_postech_hackathon_lambda_auth
