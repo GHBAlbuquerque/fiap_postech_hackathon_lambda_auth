@@ -1,5 +1,5 @@
 variable "project_name" {
-  default = "fiap_postech_hackathon"
+  default = "fiap_postech_hackathon_lambda_auth"
 }
 
 variable "region" {

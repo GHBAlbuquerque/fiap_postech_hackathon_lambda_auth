@@ -4,7 +4,7 @@ data "archive_file" "zip" {
   output_path = "../lambda_auth.zip"
 }
 
-resource "aws_lambda_function" "postech-lambda-auth-fastfood" {
+resource "aws_lambda_function" "fiap_postech_hackathon_lambda_auth" {
   function_name    = var.project_name
   filename         = data.archive_file.zip.output_path
   source_code_hash = filebase64sha256(data.archive_file.zip.output_path)
@@ -15,10 +15,10 @@ resource "aws_lambda_function" "postech-lambda-auth-fastfood" {
 }
 
 resource "aws_cloudwatch_log_group" "convert_log_group" {
-  name = "/aws/lambda/${aws_lambda_function.postech-lambda-auth-fastfood.function_name}"
+  name = "/aws/lambda/${aws_lambda_function.fiap_postech_hackathon_lambda_auth.function_name}"
 }
 
 resource "aws_lambda_function_url" "lambda_url" {
-  function_name      = aws_lambda_function.postech-lambda-auth-fastfood.function_name
+  function_name      = aws_lambda_function.fiap_postech_hackathon_lambda_auth.function_name
   authorization_type = "NONE"
 }
