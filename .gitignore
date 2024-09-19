@@ -1,0 +1,3 @@
+/.idea/
+/infra/.terraform.lock.hcl
+/infra/.terraform/
