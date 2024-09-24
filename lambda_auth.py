@@ -7,9 +7,9 @@ cognito = boto3.client('cognito-idp')
 def lambda_handler(event, context):
     print(json.dumps(event, indent=2))
 
-    email = event['headers']['email_usuario']
-    password = event['headers']['senha_usuario']
-    client_id = ''
+    email = event['headers']['user_email']
+    password = event['headers']['user_pword']
+    client_id = '6i132tjd63jrjpcl991kk0kue9'
 
     try:
         response_cognito = cognito.initiate_auth(
