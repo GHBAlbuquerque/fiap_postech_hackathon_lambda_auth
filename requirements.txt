@@ -1,0 +1,4 @@
+python-jose==3.2.0
+boto3
+pyinstaller
+pytest
